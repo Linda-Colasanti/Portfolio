@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linda Colasanti | AI Enablement · Learning Design · Structured Literacy</title>
+  <meta name="description" content="AI Enablement practitioner and learning design expert with 15+ years closing literacy and AI literacy gaps. International speaker at six summits. Co-architect of the coalition and legislative strategy behind NC HB149." />
+  <meta property="og:title" content="Linda Colasanti | AI Enablement & Learning Strategy" />
+  <meta property="og:description" content="I design learning systems, build the curriculum, deliver it live, and coach the humans who need to change." />
+  <meta property="og:url" content="https://portfolio.lindacolasanti.com/portfolio/hb149" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --navy:   #0d1b3e;
+      --navy2:  #0a1530;
+      --gold:   #f5c842;
+      --gold2:  #e8a820;
+      --white:  #fffef9;
+      --red:    #e84040;
+      --orange: #f97316;
+      --yellow: #f5c842;
+      --green:  #22c55e;
+      --blue:   #3b82f6;
+      --indigo: #6366f1;
+      --violet: #a855f7;
+      --teal:   #14b8a6;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── RAINBOW BAR ── */
+    .rainbow-bar {
+      height: 6px;
+      background: linear-gradient(90deg,
+        var(--red) 0%, var(--orange) 16%, var(--yellow) 32%,
+        var(--green) 48%, var(--blue) 64%, var(--indigo) 80%, var(--violet) 100%);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      padding: 3.5rem 2rem 3rem;
+      text-align: left;
+      overflow: hidden;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 0% 50%, #1a2f6e 0%, transparent 60%),
+        radial-gradient(ellipse at 100% 0%, #0f1f55 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 100%, #06112b 0%, transparent 60%),
+        linear-gradient(135deg, #0d1b3e 0%, #0c1a4a 40%, #0a1535 100%);
+      z-index: 0;
+    }
+
+    .floating-letters {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .fl {
+      position: absolute;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 900;
+      color: rgba(245,200,66,0.06);
+      user-select: none;
+      animation: floatUp linear infinite;
+    }
+
+    @keyframes floatUp {
+      0%   { transform: translateY(110%) rotate(-10deg); opacity: 0; }
+      10%  { opacity: 1; }
+      90%  { opacity: 1; }
+      100% { transform: translateY(-110%) rotate(10deg); opacity: 0; }
+    }
+
+    .hero-photo {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 110%;
+      max-width: 50%;
+      object-fit: contain;
+      object-position: bottom right;
+      z-index: 2;
+      opacity: 0.18;
+      mix-blend-mode: luminosity;
+      mask-image: linear-gradient(to left, rgba(0,0,0,0.7) 40%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.7) 40%, transparent 100%);
+      filter: contrast(1.1) brightness(1.2);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right,
+        rgba(13,27,62,0.95) 0%,
+        rgba(13,27,62,0.7) 45%,
+        rgba(13,27,62,0.1) 100%);
+      z-index: 3;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 4;
+      max-width: 580px;
+    }
+
+    .brand-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1.5px solid rgba(245,200,66,0.4);
+      border-radius: 999px;
+      padding: 0.3rem 1rem;
+      margin-bottom: 1.2rem;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards 0.1s;
+    }
+
+    .hero-row {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-icon {
+      font-size: clamp(4rem, 12vw, 7rem);
+      line-height: 1;
+      filter: drop-shadow(0 0 30px rgba(245,200,66,0.4));
+      opacity: 0;
+      animation: fadeUp 0.7s ease forwards 0.2s;
+    }
+
+    .hero-title-block {
+      opacity: 0;
+      animation: fadeUp 0.7s ease forwards 0.3s;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.05;
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.55);
+      font-weight: 600;
+      margin-top: 0.3rem;
+    }
+
+    .hero-hook {
+      font-size: 1rem;
+      color: var(--gold);
+      font-weight: 800;
+      margin-top: 0.5rem;
+      letter-spacing: 0.01em;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.65;
+      margin-top: 1rem;
+      max-width: 460px;
+      opacity: 0;
+      animation: fadeUp 0.7s ease forwards 0.45s;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.4rem;
+      opacity: 0;
+      animation: fadeUp 0.7s ease forwards 0.6s;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-radius: 999px;
+      padding: 0.6rem 1.3rem;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      border: none;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .badge:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.4); }
+
+    /* ── STATS STRIP ── */
+    .stats-section {
+      background: rgba(255,255,255,0.04);
+      border-top: 1px solid rgba(255,255,255,0.07);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding: 1.8rem 2rem;
+    }
+
+    .stats-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .stat-item {
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.08);
+      padding: 0 1rem;
+    }
+    .stat-item:last-child { border-right: none; }
+
+    .stat-n {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+
+    .stat-l {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 1.4;
+    }
+
+    /* ── LEARN STRIP ── */
+    .learn-section {
+      background: rgba(255,255,255,0.04);
+      border-top: 1px solid rgba(255,255,255,0.07);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding: 1.8rem 2rem;
+    }
+
+    .learn-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .learn-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .learn-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── INSTRUCTION BANNER ── */
+    .instruction-banner {
+      background: linear-gradient(135deg, rgba(245,200,66,0.12), rgba(245,200,66,0.06));
+      border-top: 1px solid rgba(245,200,66,0.2);
+      border-bottom: 1px solid rgba(245,200,66,0.2);
+      padding: 1rem 2rem;
+    }
+
+    .instruction-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .instruction-icon { font-size: 1.5rem; flex-shrink: 0; }
+
+    .instruction-text {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+      font-weight: 600;
+    }
+
+    .instruction-text strong { color: var(--gold); }
+
+    /* ── MAIN ── */
+    .main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      display: grid;
+      gap: 2rem;
+    }
+
+    /* ── CARDS ── */
+    .card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(245,200,66,0.3);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3) { animation-delay: 0.3s; }
+    .card:nth-child(4) { animation-delay: 0.4s; }
+    .card:nth-child(5) { animation-delay: 0.5s; }
+    .card:nth-child(6) { animation-delay: 0.6s; }
+    .card:nth-child(7) { animation-delay: 0.7s; }
+    .card:nth-child(8) { animation-delay: 0.8s; }
+    .card:nth-child(9) { animation-delay: 0.9s; }
+
+    /* ── CARD BANNERS ── */
+    .card-banner {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.4rem 1.8rem;
+      overflow: hidden;
+    }
+
+    .banner-step {
+      font-size: 0.7rem;
+      font-weight: 900;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      position: absolute;
+      top: 0.6rem;
+      left: 1.8rem;
+    }
+
+    .banner-icon {
+      font-size: 2.2rem;
+      flex-shrink: 0;
+      margin-top: 0.6rem;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+    }
+
+    .banner-text { flex: 1; margin-top: 0.6rem; }
+
+    .banner-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .banner-sub {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.75);
+      margin-top: 0.2rem;
+      letter-spacing: 0.03em;
+    }
+
+    .banner-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5rem;
+      font-weight: 900;
+      color: rgba(255,255,255,0.1);
+      line-height: 1;
+      position: absolute;
+      right: 1.2rem;
+      bottom: -0.5rem;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .banner-red    { background: linear-gradient(135deg, #c0392b 0%, #e84040 50%, #ff6b6b 100%); }
+    .banner-blue   { background: linear-gradient(135deg, #1a56db 0%, #3b82f6 50%, #60a5fa 100%); }
+    .banner-green  { background: linear-gradient(135deg, #15803d 0%, #22c55e 50%, #4ade80 100%); }
+    .banner-violet { background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #c084fc 100%); }
+    .banner-gold   { background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f5c842 100%); }
+    .banner-teal   { background: linear-gradient(135deg, #0f766e 0%, #14b8a6 50%, #2dd4bf 100%); }
+    .banner-pink   { background: linear-gradient(135deg, #be185d 0%, #ec4899 50%, #f472b6 100%); }
+    .banner-orange { background: linear-gradient(135deg, #c2410c 0%, #f97316 50%, #fb923c 100%); }
+    .banner-navy   { background: linear-gradient(135deg, #0d1b3e 0%, #1a2f6e 50%, #0f2060 100%); border-bottom: 2px solid rgba(245,200,66,0.4); }
+
+    /* ── CARD BODY ── */
+    .card-body { padding: 1.8rem; }
+
+    .card-body p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .card-body p:last-child { margin-bottom: 0; }
+    .card-body strong { color: var(--gold); }
+
+    /* ── CALLOUT ── */
+    .callout {
+      background: linear-gradient(135deg, rgba(245,200,66,0.1), rgba(245,200,66,0.05));
+      border-left: 4px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.4rem;
+      margin: 1.2rem 0;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.65;
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    /* ── NOTE BOX ── */
+    .note-box {
+      background: rgba(59,130,246,0.08);
+      border: 1px solid rgba(59,130,246,0.2);
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.65;
+      margin: 1rem 0;
+    }
+
+    .note-box strong { color: #60a5fa; }
+
+    /* ── SECTION LABEL ── */
+    .section-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+
+    .section-sub {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.5);
+      font-weight: 600;
+      margin-bottom: 1.4rem;
+    }
+
+    /* ── PILLAR GRID ── */
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 1.2rem 0;
+    }
+
+    .pillar-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 1.4rem;
+      transition: border-color 0.2s;
+    }
+
+    .pillar-card:hover { border-color: rgba(245,200,66,0.3); }
+
+    .pillar-num {
+      font-size: 0.65rem;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .pillar-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.9rem;
+      line-height: 1.25;
+    }
+
+    .pillar-certs { list-style: none; }
+
+    .pillar-certs li {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+      font-weight: 600;
+      padding: 0.35rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      line-height: 1.4;
+    }
+
+    .pillar-certs li:last-child { border-bottom: none; }
+
+    /* ── TIMELINE ── */
+    .timeline-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin: 1.2rem 0;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px;
+      padding: 1.2rem 1.4rem;
+      transition: border-color 0.2s;
+    }
+
+    .timeline-item:hover { border-color: rgba(245,200,66,0.25); }
+
+    .timeline-year {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--gold);
+      opacity: 0.7;
+      flex-shrink: 0;
+      width: 52px;
+      line-height: 1;
+      padding-top: 0.1rem;
+    }
+
+    .timeline-content { flex: 1; }
+
+    .timeline-role {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 0.2rem;
+    }
+
+    .timeline-org {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+
+    .timeline-body {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.65;
+    }
+
+    /* ── PROOF ITEMS ── */
+    .proof-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin: 1.2rem 0;
+    }
+
+    .proof-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px;
+      padding: 1.4rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .proof-item:hover {
+      border-color: rgba(245,200,66,0.3);
+      background: rgba(245,200,66,0.04);
+    }
+
+    .proof-tag {
+      font-size: 0.65rem;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+
+    .proof-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      line-height: 1.25;
+    }
+
+    .proof-body {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.7;
+      margin-bottom: 0.8rem;
+    }
+
+    .proof-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--teal);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .proof-link:hover { color: var(--gold); }
+    .proof-link::after { content: ' →'; }
+
+    /* Vote numbers */
+    .vote-row { display: flex; gap: 2rem; margin: 0.8rem 0 1rem; }
+    .vote-block { text-align: center; }
+    .vote-n {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .vote-l {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.45);
+      font-weight: 700;
+    }
+
+    /* ── SPEAKING CARDS ── */
+    .speaking-grid {
+      display: grid;
+      gap: 0.8rem;
+      margin: 1.2rem 0;
+    }
+
+    .speaking-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .speaking-item:hover { border-color: rgba(245,200,66,0.25); }
+
+    .speaking-img {
+      width: 100%;
+      max-height: 320px;
+      object-fit: contain;
+      object-position: center top;
+      filter: brightness(0.85) saturate(0.8);
+      display: block;
+      background: #0a1225;
+    }
+
+    .speaking-placeholder {
+      width: 100%;
+      height: 180px;
+      background: linear-gradient(135deg, rgba(99,102,241,0.2) 0%, rgba(13,27,62,0.9) 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: rgba(255,255,255,0.2);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .speaking-placeholder-icon { font-size: 2rem; opacity: 0.4; }
+
+    .speaking-content { padding: 1.2rem 1.4rem; }
+
+    .speaking-event {
+      font-size: 0.65rem;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.35rem;
+    }
+
+    .speaking-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      line-height: 1.25;
+    }
+
+    .speaking-body {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.65;
+      margin-bottom: 0.6rem;
+    }
+
+    /* ── MEDIA CARDS ── */
+    .media-grid {
+      display: grid;
+      gap: 0.8rem;
+      margin: 1.2rem 0;
+    }
+
+    .media-item {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px;
+      padding: 1.2rem 1.4rem;
+      transition: border-color 0.2s;
+    }
+
+    .media-item:hover { border-color: rgba(245,200,66,0.25); }
+
+    .media-logo {
+      width: 88px;
+      height: 64px;
+      object-fit: contain;
+      flex-shrink: 0;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      padding: 0.5rem;
+    }
+
+    .media-logo-ph {
+      width: 88px;
+      height: 64px;
+      flex-shrink: 0;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.62rem;
+      font-weight: 800;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.06em;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 0.5rem;
+      line-height: 1.4;
+    }
+
+    .media-outlet {
+      font-size: 0.65rem;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.25rem;
+    }
+
+    .media-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 0.3rem;
+    }
+
+    .media-desc {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+    }
+
+    /* ── LIVE WORK GRID ── */
+    .live-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      margin: 1.2rem 0;
+    }
+
+    .live-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px;
+      padding: 1.2rem 1.4rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .live-item:hover {
+      border-color: rgba(20,184,166,0.35);
+      background: rgba(20,184,166,0.05);
+    }
+
+    .live-tag {
+      font-size: 0.65rem;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.4rem;
+    }
+
+    .live-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 0.4rem;
+    }
+
+    .live-desc {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+      margin-bottom: 0.7rem;
+    }
+
+    .live-link {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--teal);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .live-link:hover { color: var(--gold); }
+    .live-link::after { content: ' →'; }
+
+    /* ── STACK ── */
+    .stack-group { margin-bottom: 1.8rem; }
+
+    .stack-label {
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(245,200,66,0.2);
+    }
+
+    .stack-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+    .stack-tag {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 999px;
+      padding: 0.3rem 0.9rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.75);
+    }
+
+    /* ── CONTACT LINKS ── */
+    .contact-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      margin: 1.2rem 0;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 1rem 1.3rem;
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.92rem;
+      transition: all 0.2s;
+    }
+
+    .contact-item:hover {
+      background: rgba(245,200,66,0.08);
+      border-color: rgba(245,200,66,0.3);
+      color: var(--white);
+    }
+
+    .contact-icon { font-size: 1.1rem; width: 24px; text-align: center; }
+    .contact-sub { font-size: 0.75rem; color: rgba(255,255,255,0.35); margin-left: auto; font-weight: 600; }
+
+    /* ── CLOSING QUOTE ── */
+    .closing-quote {
+      text-align: center;
+      padding: 3rem 2rem 2rem;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .closing-quote p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      font-style: italic;
+      line-height: 1.7;
+      margin-bottom: 0.8rem;
+    }
+
+    .closing-quote .line1 { color: var(--white); font-weight: 700; }
+    .closing-quote .line2 { color: rgba(255,255,255,0.6); font-weight: 400; }
+    .closing-quote .line3 { color: var(--teal); font-weight: 700; }
+    .closing-quote .line4 { color: rgba(255,255,255,0.5); font-weight: 400; }
+
+    /* ── SOCIAL LINKS ── */
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1.5px solid transparent;
+      transition: all 0.2s ease;
+      letter-spacing: 0.03em;
+    }
+
+    .social-btn.linkedin { background: rgba(10,102,194,0.12); border-color: rgba(10,102,194,0.3); color: #60a5fa; }
+    .social-btn.linkedin:hover { background: rgba(10,102,194,0.25); border-color: #0a66c2; transform: translateY(-2px); }
+    .social-btn.email { background: rgba(245,200,66,0.1); border-color: rgba(245,200,66,0.3); color: var(--gold); }
+    .social-btn.email:hover { background: rgba(245,200,66,0.2); border-color: var(--gold); transform: translateY(-2px); }
+    .social-btn.rfa { background: rgba(20,184,166,0.1); border-color: rgba(20,184,166,0.3); color: var(--teal); }
+    .social-btn.rfa:hover { background: rgba(20,184,166,0.2); border-color: var(--teal); transform: translateY(-2px); }
+
+    .footer-divider {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      border-radius: 999px;
+      margin: 0 auto 1.2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1.5rem 2rem;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      color: rgba(255,255,255,0.3);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    footer span { color: var(--gold); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 700px) {
+      .pillar-grid { grid-template-columns: 1fr; }
+      .live-grid { grid-template-columns: 1fr; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .stat-item:nth-child(2) { border-right: none; }
+      .stat-item:nth-child(3) { border-right: none; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem; }
+      .stat-item:nth-child(4) { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem; }
+      .media-item { flex-direction: column; }
+      .hero { text-align: center; min-height: auto; padding: 2.5rem 1.5rem 2rem; }
+      .hero-content { max-width: 100%; }
+      .hero-row { justify-content: center; }
+      .hero-photo { opacity: 0.08; }
+      .hero-badges { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="rainbow-bar"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+
+    <div class="floating-letters">
+      <span class="fl" style="left:5%;  font-size:4rem;  animation-duration:12s; animation-delay:0s;">A</span>
+      <span class="fl" style="left:15%; font-size:2rem;  animation-duration:15s; animation-delay:2s;">I</span>
+      <span class="fl" style="left:25%; font-size:5rem;  animation-duration:18s; animation-delay:4s;">?</span>
+      <span class="fl" style="left:60%; font-size:3rem;  animation-duration:14s; animation-delay:1s;">A</span>
+      <span class="fl" style="left:70%; font-size:6rem;  animation-duration:20s; animation-delay:3s;">I</span>
+      <span class="fl" style="left:80%; font-size:2.5rem;animation-duration:11s; animation-delay:5s;">?</span>
+      <span class="fl" style="left:90%; font-size:4rem;  animation-duration:16s; animation-delay:7s;">A</span>
+      <span class="fl" style="left:45%; font-size:3.5rem;animation-duration:13s; animation-delay:6s;">I</span>
+    </div>
+
+    <img class="hero-photo" src="https://assets.readingforall.com/Images/Linda.PNG" alt="Linda Colasanti" />
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="brand-tag">Linda Colasanti Consulting &middot; Davidson, NC</div>
+      <div class="hero-row">
+        <div class="hero-title-block">
+          <div class="hero-title">Linda<br/>Colasanti</div>
+          <div class="hero-subtitle">AI Enablement Lead &amp; Learning Systems Architect</div>
+          <div class="hero-hook">I help organizations actually use AI instead of just talking about it.</div>
+        </div>
+      </div>
+      <p class="hero-description">
+        My background is learning science, which is usually where AI implementation falls apart. 15+ years closing literacy and AI literacy gaps for nontechnical audiences. Nine certifications across AI, behavioral change, and structured literacy. Co-architect of the coalition and legislative strategy behind NC HB149.
+      </p>
+      <div class="hero-badges">
+        <a href="#about" class="badge" style="background:linear-gradient(135deg,#f5c842,#e8a820);color:#0d1b3e;">✍️ About Linda</a>
+        <a href="#proof" class="badge" style="background:linear-gradient(135deg,#e84040,#ff6b6b);color:#fff;">🏗️ Proof of Work</a>
+        <a href="#speaking" class="badge" style="background:linear-gradient(135deg,#14b8a6,#2dd4bf);color:#fff;">🎤 Speaking</a>
+        <a href="#contact" class="badge" style="background:linear-gradient(135deg,#22c55e,#4ade80);color:#fff;">✉️ Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <div class="stats-section">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-n">15+</div>
+        <div class="stat-l">Years closing learning gaps</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-n">9</div>
+        <div class="stat-l">Certifications: AI, NLP &amp; literacy</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-n">6</div>
+        <div class="stat-l">International summits</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-n">114–0</div>
+        <div class="stat-l">NC HB149 House vote</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEARN STRIP -->
+  <div class="learn-section">
+    <div class="learn-inner">
+      <div class="learn-item"><div class="learn-dot" style="background:var(--gold)"></div>AI Enablement Lead and Learning Systems Architect</div>
+      <div class="learn-item"><div class="learn-dot" style="background:var(--red)"></div>International speaker at six summits</div>
+      <div class="learn-item"><div class="learn-dot" style="background:var(--green)"></div>Co-architect of the coalition and legislative strategy behind NC HB149</div>
+      <div class="learn-item"><div class="learn-dot" style="background:var(--blue)"></div>Designs and produces AI-powered multisensory curriculum, deployed independently</div>
+      <div class="learn-item"><div class="learn-dot" style="background:var(--teal)"></div>Nine certifications across AI, NLP &amp; structured literacy</div>
+    </div>
+  </div>
+
+  <!-- INSTRUCTION BANNER -->
+  <div class="instruction-banner">
+    <div class="instruction-inner">
+      <span class="instruction-icon">🌟</span>
+      <div class="instruction-text">
+        <strong>New here?</strong> Start with About and work your way down. Each section builds on the last.<br/>
+        <span style="color:rgba(255,255,255,0.6);">Want to see live work? Jump straight to Proof of Work or Live Demos below.</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="main">
+
+    <!-- ── ABOUT ── -->
+    <div class="card" id="about">
+      <div class="card-banner banner-navy">
+        <div class="banner-step" style="color:rgba(245,200,66,0.8);">Start Here</div>
+        <div class="banner-icon">✍️</div>
+        <div class="banner-text">
+          <div class="banner-title" style="color:var(--gold);">A Note From Linda</div>
+          <div class="banner-sub">Why this background is unusual</div>
+        </div>
+        <div class="banner-number" style="color:rgba(245,200,66,0.08);">✦</div>
+      </div>
+      <div class="card-body">
+        <p>I have spent 15+ years as a Dyslexia Specialist and Orton-Gillingham practitioner working with students that traditional classroom instruction could not reach. I am not a classroom teacher. I am the person educators call when their students are still struggling. That perspective is exactly why my AI work is different.</p>
+        <p>I am also a certified AI consultant and implementation specialist. I build AI-powered learning tools and use AI every single day in my practice. And I am telling you, from the inside, that <strong>AI alone will never close the learning gap</strong>. Because the gap is never just about skills. Underneath every skill gap is a belief gap.</p>
+        <div class="callout">This is not a theoretical background. It is a practitioner's track record built from real-world work with nontechnical learners at every level, from struggling second graders to C-suite executives who cannot figure out why their AI rollout is failing.</div>
+        <p>I hold certifications across three pillars: dyslexia and structured literacy, master-level NLP and behavioral change, and AI consulting and implementation. I was a co-architect of the coalition and legislative strategy behind North Carolina House Bill 149, signed July 20, 2017. It was the first dyslexia identification and intervention law in North Carolina history, and it passed unanimously in both chambers.</p>
+        <p style="font-style:italic;color:rgba(255,255,255,0.55);">"I don't sell AI hype. I build with it." Linda Colasanti</p>
+      </div>
+    </div>
+
+    <!-- ── CREDENTIALS ── -->
+    <div class="card" id="credentials">
+      <div class="card-banner banner-violet">
+        <div class="banner-step">Credentials</div>
+        <div class="banner-icon">🧠</div>
+        <div class="banner-text">
+          <div class="banner-title">Three Credential Pillars</div>
+          <div class="banner-sub">Nine certifications. One practitioner.</div>
+        </div>
+        <div class="banner-number">01</div>
+      </div>
+      <div class="card-body">
+        <p>This combination is rare. AI consultants who understand behavioral change at a master level, and who have spent 15+ years designing instruction for people that standard methods could not reach that intersection is what makes AI adoption actually stick.</p>
+
+        <div class="pillar-grid">
+          <div class="pillar-card">
+            <div class="pillar-num">Pillar One</div>
+            <div class="pillar-title">AI Consulting &amp; Implementation</div>
+            <ul class="pillar-certs">
+              <li>Certified AI Consultant</li>
+              <li>Certified AI Implementation Specialist</li>
+              <li>Data Science Foundations</li>
+            </ul>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">Pillar Two</div>
+            <div class="pillar-title">Behavioral &amp; Organizational Change</div>
+            <ul class="pillar-certs">
+              <li>NLP Master Practitioner</li>
+              <li>NLP Coaching Certification</li>
+              <li>NLP Practitioner</li>
+            </ul>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">Pillar Three</div>
+            <div class="pillar-title">Structured Literacy &amp; Assistive Technology</div>
+            <ul class="pillar-certs">
+              <li>Barton Reading &amp; Spelling: Advanced Certified Specialist (Dyslexia Specialist)</li>
+              <li>AIM Institute: Foundations for Reading</li>
+              <li>IMSE: Orton-Gillingham Practitioner, 3 curricula</li>
+              <li>15+ years assistive technology practice</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note-box">
+          <!-- UPDATE AI TOOLS ORDER HERE -->
+          <strong>Primary AI tools:</strong> Claude, Gemini, and Perplexity for daily design, research, and curriculum development. Also experienced with M365 Copilot, Copilot Chat, and ChatGPT Enterprise. Designs and produces AI-powered multisensory curriculum and deploys it independently, no agency, no developer, no external team.
+        </div>
+      </div>
+    </div>
+
+    <!-- UPDATE TIMELINE HERE -->
+    <!-- ── THROUGH LINE ── -->
+    <div class="card" id="throughline">
+      <div class="card-banner banner-blue">
+        <div class="banner-step">The Through Line</div>
+        <div class="banner-icon">🔄</div>
+        <div class="banner-text">
+          <div class="banner-title">The Same Question, Thirty Years Running</div>
+          <div class="banner-sub">How does complex information get from source to human?</div>
+        </div>
+        <div class="banner-number">02</div>
+      </div>
+      <div class="card-body">
+        <p>In retail, the answer was data, vendor relationships, and trend intuition. In television, it was editorial judgment and a weekly deadline. In advocacy, it was understanding how legislators think. In the classroom, it was multisensory learning design. In AI, it is all of those things at once.</p>
+        <div class="callout">The tools have changed. The question never has. And that through line is exactly what makes this background unusual.</div>
+
+        <div class="timeline-grid">
+          <div class="timeline-item">
+            <div class="timeline-year">'90</div>
+            <div class="timeline-content">
+              <div class="timeline-role">Corporate Retail</div>
+              <div class="timeline-org">Belk Department Stores &amp; The Limited &middot; Charlotte, NC / Philadelphia</div>
+              <div class="timeline-body">Started in hard and soft home at Belk, advancing to apparel and ultimately managing 21 departments. Retail management at The Limited. Data-driven decisions under real margin pressure. Early training in reading systems, identifying gaps, and driving measurable outcomes.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">'98</div>
+            <div class="timeline-content">
+              <div class="timeline-role">Broadcast Content Production</div>
+              <div class="timeline-org">Carolina Business Review with Chris William &middot; Charlotte, NC</div>
+              <div class="timeline-body">Produced syndicated business content across 22 markets. Translating complexity for a broad audience every week. Early foundation for instructional design: the discipline of making hard things clear.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">'11</div>
+            <div class="timeline-content">
+              <div class="timeline-role">Learning Systems &amp; Legislative Advocacy</div>
+              <div class="timeline-org">Reading For All (formerly Carolina Dyslexia Consulting) &middot; Davidson, NC</div>
+              <div class="timeline-body">Built Reading For All from the ground up. Authored NC HB149, North Carolina's first dyslexia identification and intervention law, signed July 20, 2017. Led Decoding Dyslexia NC as State Director for six years as it grew to all 50 states and Canada. Volunteer member, NC DPI Specific Learning Disability Task Force under Superintendent June Atkinson.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">Now</div>
+            <div class="timeline-content">
+              <div class="timeline-role">AI Enablement &amp; Workforce Learning</div>
+              <div class="timeline-org">Linda Colasanti Consulting LLC &middot; Davidson, NC</div>
+              <div class="timeline-body">Designing and producing AI-powered multisensory curriculum and learning experiences, deployed independently across multiple platforms. International speaker at six summits. Bringing 15+ years of learning science to AI adoption and enablement.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UPDATE PROOF OF WORK HERE -->
+    <!-- ── PROOF OF WORK ── -->
+    <div class="card" id="proof">
+      <div class="card-banner banner-red">
+        <div class="banner-step">Proof of Work</div>
+        <div class="banner-icon">🏗️</div>
+        <div class="banner-text">
+          <div class="banner-title">Built and Deployed</div>
+          <div class="banner-sub">Not theoretical. Every item below is live, linked, or documented.</div>
+        </div>
+        <div class="banner-number">03</div>
+      </div>
+      <div class="card-body">
+
+        <div class="proof-grid">
+
+          <div class="proof-item">
+            <span class="proof-tag">Legislative Impact &middot; NC HB149 &middot; Signed July 20, 2017</span>
+            <div class="proof-title">North Carolina's First Dyslexia Law</div>
+            <div class="vote-row">
+              <div class="vote-block">
+                <div class="vote-n">114–0</div>
+                <div class="vote-l">House</div>
+              </div>
+              <div class="vote-block">
+                <div class="vote-n">47–0</div>
+                <div class="vote-l">Senate</div>
+              </div>
+            </div>
+            <p class="proof-body">Co-architect of the coalition and legislative strategy behind the first dyslexia identification and intervention mandate in North Carolina history. Served on the NC DPI Specific Learning Disability Task Force under Superintendent June Atkinson. Delivered in person to Superintendent Mark Johnson when the bill became law.</p>
+            <a href="https://legislation.lindacolasanti.com" target="_blank" class="proof-link">Read the Full Story</a>
+          </div>
+
+          <div class="proof-item">
+            <span class="proof-tag">Live Platform &middot; readingforall.com</span>
+            <div class="proof-title">Reading For All™ Learning System</div>
+            <p class="proof-body">The only structured literacy system using AI to generate interactive, multisensory practice apps covering every area of reading instruction. Teaching videos, original songs, custom practice apps, and a community platform. Built, deployed, and maintained without an external engineering team. Supporting ALL reading programs not competing with them.</p>
+            <a href="https://www.readingforall.com" target="_blank" class="proof-link">View Platform</a>
+          </div>
+
+          <div class="proof-item">
+            <span class="proof-tag">Living Resource &middot; ILA Summit 2026</span>
+            <div class="proof-title">The Professor's AI Playbook</div>
+            <p class="proof-body">A continuously updated practitioner's framework for higher education leaders navigating AI adoption. Six-step protocol, prompt library, mastery verification questions, and a live embedded demo of AI-powered structured literacy. Delivered at the International Leadership Association Virtual Summit, Spring 2026.</p>
+            <a href="https://lessons.readingforall.com/professors-4w9m" target="_blank" class="proof-link">View Playbook</a>
+          </div>
+
+          <div class="proof-item">
+            <span class="proof-tag">Curriculum Sample &middot; Lesson L1</span>
+            <div class="proof-title">Short Vowel Instruction: A Complete Learning Loop</div>
+            <p class="proof-body">A full structured literacy unit: teaching video, interactive AI-powered practice app, original song, and decodable reader. Every element built in-house. Demonstrates the multisensory OG methodology in a complete digital experience grounded in the Science of Reading.</p>
+            <a href="https://lessons.readingforall.com/lessons/lesson-l1-q8u5-short-u" target="_blank" class="proof-link">View Lesson</a>
+          </div>
+
+
+
+          <div class="proof-item">
+            <span class="proof-tag">Published Work · Children's Book</span>
+            <div class="proof-title">Suzy the Struggling Reader</div>
+            <p class="proof-body">A children's book about dyslexia used by specialists, schools, and families across the country. Written to give struggling readers a story that reflects their experience and affirms their potential. Because before a child can learn to read, they have to believe they can.</p>
+            <a href="https://www.amazon.com/Suzy-Struggling-Reader-Story-Dyslexia/dp/B0CD16WF5K" target="_blank" class="proof-link">Buy on Amazon</a>
+            <a href="https://www.target.com/p/suzy-the-struggling-reader-by-linda-colasanti-paperback/-/A-1009223304" target="_blank" class="proof-link" style="margin-left:1.5rem;">Buy on Target</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- UPDATE SPEAKING EVENTS HERE -->
+    <!-- ── SPEAKING ── -->
+    <div class="card" id="speaking">
+      <div class="card-banner banner-gold">
+        <div class="banner-step">International Speaking</div>
+        <div class="banner-icon">🎤</div>
+        <div class="banner-text">
+          <div class="banner-title">On the Platform</div>
+          <div class="banner-sub">Six international summits. All original material. Four delivered live, two pre-recorded with live breakout sessions.</div>
+        </div>
+        <div class="banner-number">04</div>
+      </div>
+      <div class="card-body">
+        <p>International speaker at six summits covering human-centered AI adoption, literacy advocacy, and practical enablement for nontechnical audiences. All materials, slide decks, demos, and job aids designed and delivered by Linda.</p>
+
+        <div class="speaking-grid">
+
+          <div class="speaking-item">
+            <img src="https://assets.readingforall.com/Speaking/ai-advantage-summit.png" alt="Achieving the AI Advantage Global Summit" class="speaking-img">
+            <div class="speaking-content">
+              <div class="speaking-event">Achieving the AI Advantage Global Summit &middot; Fall 2025</div>
+              <div class="speaking-title">Human-Centered AI Implementation</div>
+              <p class="speaking-body">Featured alongside Kane Minkus, Raj Sisodia, and Garry Ridge. Applied AI strategy and ethical adoption for business leaders. Pre-recorded session with live breakout room.</p>
+            </div>
+          </div>
+
+          <div class="speaking-item">
+            <img src="https://assets.readingforall.com/Speaking/ila-summit.jpeg" alt="ILA AI & Leadership Virtual Summit" class="speaking-img">
+            <div class="speaking-content">
+              <div class="speaking-event">International Leadership Association Virtual Summit &middot; Spring 2026</div>
+              <div class="speaking-title">"Reading Didn't Break in College"</div>
+              <p class="speaking-body">AI-powered learning design and literacy advocacy for higher ed leaders. The session that became the Professor's AI Playbook. Embedded live demo of the Reading For All system.</p>
+            </div>
+          </div>
+
+          <div class="speaking-item">
+            <img src="https://assets.readingforall.com/Speaking/she-rises-summit.png" alt="She Rises Summit" class="speaking-img">
+            <div class="speaking-content">
+              <div class="speaking-event">She Rises Summit &middot; Fall 2025</div>
+              <div class="speaking-title">AI Adoption for Non-Technical Audiences</div>
+              <p class="speaking-body">Practical enablement for women in business navigating AI adoption. Grounded in 15+ years working with learners that traditional instruction could not reach. Pre-recorded session with live breakout room.</p>
+            </div>
+          </div>
+
+          <div class="speaking-item">
+            <img src="https://assets.readingforall.com/Speaking/health-wealth-wisdom.jpg" alt="Health Wealth and Wisdom Live Web Summit" class="speaking-img">
+            <div class="speaking-content">
+              <div class="speaking-event">Health Wealth and Wisdom Live Web Summit &middot; December 2023</div>
+              <div class="speaking-title">Words Matter: Struggling Readers, Labels and Low Self-Esteem</div>
+              <p class="speaking-body">The language adults use around struggling readers shapes identity. A practitioner's framework on the belief gap beneath every literacy gap.</p>
+            </div>
+          </div>
+
+          <div class="speaking-item">
+            <img src="https://assets.readingforall.com/Speaking/success-summit.jpg" alt="The Success Summit" class="speaking-img">
+            <div class="speaking-content">
+              <div class="speaking-event">The Success Summit &middot; May 2023</div>
+              <div class="speaking-title">Featured Speaker</div>
+              <p class="speaking-body">Featured alongside seven business and leadership experts. Connecting learning science, behavioral change, and technology adoption.</p>
+            </div>
+          </div>
+
+          <div class="speaking-item">
+            <img src="https://assets.readingforall.com/Speaking/family-matters.jpeg" alt="Family Matters Empowering Parents of Children with Dyslexia" class="speaking-img">
+            <div class="speaking-content">
+              <div class="speaking-event">Family Matters International Summit &middot; Zoom</div>
+              <div class="speaking-title">Empowering Parents of Children with Dyslexia</div>
+              <p class="speaking-body">International virtual summit for families navigating dyslexia identification and intervention. Practical guidance on advocating for your child and understanding what structured literacy actually looks like.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- UPDATE MEDIA APPEARANCES HERE -->
+    <!-- ── MEDIA ── -->
+    <div class="card" id="media">
+      <div class="card-banner banner-teal">
+        <div class="banner-step">Media Appearances</div>
+        <div class="banner-icon">📺</div>
+        <div class="banner-text">
+          <div class="banner-title">Television &amp; Podcast</div>
+          <div class="banner-sub">On the record.</div>
+        </div>
+        <div class="banner-number">05</div>
+      </div>
+      <div class="card-body">
+
+        <div class="media-grid">
+
+          <div class="media-item">
+            <img src="https://assets.readingforall.com/Speaking/spectrum-news.png" alt="Charlotte Today / Spectrum News" class="media-logo">
+            <div>
+              <div class="media-outlet">Spectrum News &middot; Charlotte Today</div>
+              <div class="media-title">Dyslexia Expert Guest</div>
+              <p class="media-desc">Television appearance covering dyslexia identification, structured literacy intervention, and the state of reading education in North Carolina.</p>
+            </div>
+          </div>
+
+          <div class="media-item">
+            <img src="https://assets.readingforall.com/Speaking/wcnc.png" alt="WCNC / Time Warner Cable News" class="media-logo">
+            <div>
+              <div class="media-outlet">WCNC &middot; Time Warner Cable News In Depth</div>
+              <div class="media-title">Featured Expert</div>
+              <p class="media-desc">In-depth segment on dyslexia legislation, structured literacy, and the Reading For All approach. Part of the NC HB149 public awareness campaign.</p>
+            </div>
+          </div>
+
+          <div class="media-item">
+            <img src="https://assets.readingforall.com/Speaking/hello-brains-podcast.JPG" alt="Hello Brains Podcast with April Mahoney" class="media-logo">
+            <div>
+              <div class="media-outlet">Hello Brains Podcast &middot; with April Mahoney</div>
+              <div class="media-title">Podcast Guest</div>
+              <p class="media-desc">Conversation on ADHD, dyslexia, neurodiverse learning, and the intersection of structured literacy with assistive technology and AI tools.</p>
+            </div>
+          </div>
+
+          <div class="media-item">
+            <img src="https://assets.readingforall.com/Speaking/dr-bauer-podcast.png" alt="Teach to Go Podcast with Dr. Nerissa Bauer" class="media-logo">
+            <div>
+              <div class="media-outlet">Teach to Go Podcast &middot; Dr. Nerissa Bauer</div>
+              <div class="media-title">Debunking Dyslexia Myths</div>
+              <p class="media-desc">In-depth conversation on dyslexia myths, structured literacy, and what educators and parents need to know to help struggling readers.</p>
+            </div>
+          </div>
+
+          <div class="media-item">
+            <img src="https://assets.readingforall.com/Speaking/state-super.png" alt="Office of the State Superintendent NC" class="media-logo">
+            <div>
+              <div class="media-outlet">NC Office of the State Superintendent</div>
+              <div class="media-title">NC HB149 Delivered to Superintendent Mark Johnson</div>
+              <p class="media-desc">Presenting the NC HB149 coalition findings and legislation directly to Superintendent Mark Johnson. The bill was signed into law July 20, 2017.</p>
+              <a href="https://legislation.lindacolasanti.com" target="_blank" class="proof-link" style="margin-top:0.5rem;display:inline-block;">Read the Full Story</a>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ── LIVE DEMOS ── -->
+    <div class="card" id="live">
+      <div class="card-banner banner-green">
+        <div class="banner-step">Live Work</div>
+        <div class="banner-icon">🛠️</div>
+        <div class="banner-text">
+          <div class="banner-title">I Built Every Single Thing You're Looking At.</div>
+          <div class="banner-sub">No agency. No developer. No external team. Every song, every lesson, every platform.</div>
+        </div>
+        <div class="banner-number">06</div>
+      </div>
+      <div class="card-body">
+
+        <div class="callout">Every site, every app, every lesson, every song, every book, every platform linked below was designed, built, and deployed by Linda. This is not a portfolio of things she managed. This is a portfolio of things she made.</div>
+
+        <div class="live-grid">
+          <div class="live-item">
+            <!-- UPDATE PLATFORM DESCRIPTION HERE -->
+            <div class="live-tag">Literacy Curriculum · Built from scratch</div>
+            <div class="live-title">Reading For All™ Literacy Curriculum</div>
+            <p class="live-desc">A complete literacy curriculum built end to end: custom AI-powered practice apps, teaching videos, original songs, decodable readers, community infrastructure, DNS, cloud hosting, and a full lesson library. Every element designed, produced, and deployed by Linda. See the Short Vowel U lesson for a live look at the build quality. Each lesson has its own URL and follows multisensory, explicit, sequential, cumulative instruction.</p>
+          </div>
+          <div class="live-item">
+            <div class="live-tag">Practitioner Resource · Built and deployed</div>
+            <div class="live-title">The Professor's AI Playbook</div>
+            <p class="live-desc">Six-step framework, prompt library, and live embedded demo. Built in HTML, deployed to Cloudflare Pages. Delivered at ILA Summit 2026. You are looking at the same tech stack right now.</p>
+            <a href="https://lessons.readingforall.com/professors-4w9m" target="_blank" class="live-link">Open Playbook</a>
+          </div>
+          <div class="live-item">
+            <div class="live-tag">Live Lesson · Built end to end</div>
+            <div class="live-title">Short Vowel U: Complete Learning Loop</div>
+            <p class="live-desc">Teaching video, interactive AI-powered practice app, original song, decodable reader. Every element scripted, produced, and deployed by Linda. This is what a full curriculum unit looks like.</p>
+            <a href="https://lessons.readingforall.com/lessons/lesson-l1-q8u5-short-u" target="_blank" class="live-link">View Lesson</a>
+          </div>
+          <div class="live-item">
+            <div class="live-tag">App Demo · Watch it live</div>
+            <div class="live-title">AI-Powered Practice App Demo</div>
+            <p class="live-desc">A walkthrough of what the Reading For All practice apps actually do. Custom-built interactive structured literacy apps. No off-the-shelf tool. No developer hired.</p>
+            <a href="https://youtu.be/A4pRRDXoWco?si=lzljSdGDFZvRtEzA" target="_blank" class="live-link">Watch Demo</a>
+          </div>
+          <div class="live-item">
+            <div class="live-tag">Tutoring Site · Built from scratch</div>
+            <div class="live-title">Dyslexia Remedy</div>
+            <p class="live-desc">A complete tutoring website for 1:1 OG-based dyslexia intervention built from scratch in HTML and deployed via GitHub to Cloudflare Pages. Same infrastructure, same hands. Virtual, worldwide.</p>
+            <a href="https://www.dyslexiaremedy.com" target="_blank" class="live-link">dyslexiaremedy.com</a>
+          </div>
+          <div class="live-item">
+            <div class="live-tag">Summit Presentation · Recorded live</div>
+            <div class="live-title">AI Advantage Summit Talk</div>
+            <p class="live-desc">24-minute session from September 2025. Slides, demos, and delivery all Linda's. Human-centered AI implementation for business leaders.</p>
+            <a href="https://www.youtube.com/watch?v=12vkXzGbxs0" target="_blank" class="live-link">Watch on YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UPDATE TOOLS LIST HERE -->
+    <!-- ── TECH STACK ── -->
+    <div class="card" id="stack">
+      <div class="card-banner banner-orange">
+        <div class="banner-step">Technology Stack</div>
+        <div class="banner-icon">⚙️</div>
+        <div class="banner-text">
+          <div class="banner-title">Tools I Use Daily</div>
+          <div class="banner-sub">Not a list of things I've heard of. Things I use every day.</div>
+        </div>
+        <div class="banner-number">07</div>
+      </div>
+      <div class="card-body">
+
+        <div class="stack-group">
+          <div class="stack-label">AI Platforms and Models</div>
+          <div class="stack-tags">
+            <span class="stack-tag">Claude</span>
+            <span class="stack-tag">Gemini</span>
+            <span class="stack-tag">ChatGPT Enterprise</span>
+            <span class="stack-tag">M365 Copilot</span>
+            <span class="stack-tag">Copilot Chat</span>
+            <span class="stack-tag">Perplexity</span>
+            <span class="stack-tag">Midjourney</span>
+            <span class="stack-tag">DALL-E</span>
+            <span class="stack-tag">HeyGen</span>
+            <span class="stack-tag">ElevenLabs</span>
+            <span class="stack-tag">Suno</span>
+            <span class="stack-tag">CapCut</span>
+            <span class="stack-tag">Runway ML</span>
+          </div>
+        </div>
+
+        <div class="stack-group">
+          <div class="stack-label">SEO, AEO and Research Intelligence</div>
+          <div class="stack-tags">
+            <span class="stack-tag">Semrush</span>
+            <span class="stack-tag">Answer the Public</span>
+            <span class="stack-tag">Google Search Console</span>
+            <span class="stack-tag">Crawl.ai</span>
+            <span class="stack-tag">QUSO.ai</span>
+            <span class="stack-tag">Apify</span>
+          </div>
+        </div>
+
+        <div class="stack-group">
+          <div class="stack-label">Infrastructure and Platform</div>
+          <div class="stack-tags">
+            <span class="stack-tag">Cloudflare Pages</span>
+            <span class="stack-tag">Cloudflare R2</span>
+            <span class="stack-tag">GitHub</span>
+            <span class="stack-tag">HTML &amp; CSS</span>
+            <span class="stack-tag">DNS Configuration</span>
+            <span class="stack-tag">Custom App Development</span>
+            <span class="stack-tag">New Zenler</span>
+            <span class="stack-tag">Skool</span>
+            <span class="stack-tag">Stan Store</span>
+          </div>
+        </div>
+
+        <div class="stack-group">
+          <!-- UPDATE TOOLS HERE -->
+          <div class="stack-label">Automation, CRM and Strategy</div>
+          <div class="stack-tags">
+            <span class="stack-tag">Prompt Library Design</span>
+            <span class="stack-tag">Email Automation</span>
+            <span class="stack-tag">Canva</span>
+            <span class="stack-tag">Sales Funnels</span>
+            <span class="stack-tag">Content Architecture</span>
+            <span class="stack-tag">GoHighLevel</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- UPDATE CONTACT INFO HERE -->
+    <!-- ── CONTACT ── -->
+    <div class="card" id="contact">
+      <div class="card-banner banner-navy">
+        <div class="banner-step" style="color:rgba(245,200,66,0.8);">Get in Touch</div>
+        <div class="banner-icon">✉️</div>
+        <div class="banner-text">
+          <div class="banner-title" style="color:var(--gold);">Let's Talk About What You're Building</div>
+          <div class="banner-sub">Davidson, NC area. Linda Colasanti Consulting LLC.</div>
+        </div>
+        <div class="banner-number" style="color:rgba(245,200,66,0.08);">✦</div>
+      </div>
+      <div class="card-body">
+
+        <div class="contact-grid">
+          <a href="mailto:linda@lindacolasanti.com" class="contact-item">
+            <span class="contact-icon">✉</span>
+            linda@lindacolasanti.com
+          </a>
+          <a href="https://www.linkedin.com/in/linda-colasanti-bb506a99" target="_blank" class="contact-item">
+            <span class="contact-icon">in</span>
+            LinkedIn Profile
+            <span class="contact-sub">linkedin.com/in/linda-colasanti-bb506a99</span>
+          </a>
+          <a href="https://www.lindacolasanti.com" target="_blank" class="contact-item">
+            <span class="contact-icon">→</span>
+            Linda Colasanti Consulting
+            <span class="contact-sub">lindacolasanti.com</span>
+          </a>
+          <a href="https://www.dyslexiaremedy.com" target="_blank" class="contact-item">
+            <span class="contact-icon">→</span>
+            Dyslexia Remedy
+            <span class="contact-sub">dyslexiaremedy.com</span>
+          </a>
+          <a href="https://www.readingforall.com" target="_blank" class="contact-item">
+            <span class="contact-icon">→</span>
+            Reading For All™
+            <span class="contact-sub">readingforall.com</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- CLOSING QUOTE -->
+  <div class="closing-quote">
+    <p class="line1">"AI alone will never close the learning gap."</p>
+    <p class="line2">"Underneath every skill gap is a belief gap."</p>
+    <p class="line3">"The machines get to do the machine stuff."</p>
+    <p class="line4">"We get to be human."</p>
+    <p class="line1" style="margin-top:1.5rem;font-size:clamp(0.9rem,2vw,1.1rem);">"I don't sell AI hype. I build with it."</p>
+    <p style="margin-top:1.2rem;font-size:0.75rem;color:rgba(255,255,255,0.25);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;">Linda Colasanti &middot; Davidson, NC &middot; 2026</p>
+  </div>
+
+  <div class="rainbow-bar"></div>
+
+  <footer>
+    <div class="social-links">
+      <a href="mailto:linda@lindacolasanti.com" class="social-btn email">✉ Email Linda</a>
+      <a href="https://www.linkedin.com/in/linda-colasanti-bb506a99" target="_blank" class="social-btn linkedin">in LinkedIn</a>
+      <a href="https://www.lindacolasanti.com" target="_blank" class="social-btn rfa">→ lindacolasanti.com</a>
+      <a href="https://www.dyslexiaremedy.com" target="_blank" class="social-btn rfa">→ Dyslexia Remedy</a>
+      <a href="https://www.readingforall.com" target="_blank" class="social-btn rfa">→ Reading For All™</a>
+    </div>
+    <div class="footer-divider"></div>
+    <p>© 2026 <span>Linda Colasanti Consulting LLC</span> &middot; Davidson, NC 28036</p>
+    <p style="margin-top:0.4rem;color:rgba(255,255,255,0.2);">portfolio.lindacolasanti.com</p>
+  </footer>
+
+</body>
+</html>
